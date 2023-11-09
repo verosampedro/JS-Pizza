@@ -1,9 +1,10 @@
-let ingredienteMasa = 0;
-let ingredienteTomate = 0;
-let ingredienteMozzarella = 0;
-let ingredientePicadillo = 0;
-let ingredienteCabrales = 0;
-let ingredienteTorreznos = 0;
+let ingredienteMasa = 200;
+let ingredienteTomate = 200;
+let ingredienteMozzarella = 200;
+let ingredientePicadillo = 200;
+let ingredienteCabrales = 200;
+let ingredienteTorreznos = 200;
+let ingredienteArzua = 200;
 
 let masa = "masa";
 let tomate = "tomate";
@@ -11,17 +12,15 @@ let mozzarella = "mozzarella";
 let picadillo = "picadillo";
 let cabrales = "cabrales";
 let torreznos = "torreznos";
+let Arzua = "arzua";
 
 
-function app (){
-    comprar();
-    elaborar();
-    precalentar();
-    cocinarPizza(5);
-    repartir ();
-}
-
-app ()
+//  function app (){
+//     elaborar();
+//     precalentar();
+//     cocinarPizza(5);
+//     repartir ();
+// }
 
 function comprar() {
   console.log("vamos a ir a hacer la compra:");
@@ -41,7 +40,7 @@ function comprar() {
 }
 
 
-function elaborar() {
+export function elaborarMontaniesa() {
   console.log("Vamos a elaborar la pizza:");
 
   if (ingredienteMasa >= 1) {
@@ -88,10 +87,47 @@ function elaborar() {
   }
 
 
+  export function elaborarLaVeroQueso() {
+    console.log("Vamos a elaborar la pizza:");
+  
+    if (ingredienteMasa >= 1) {
+      console.log("Sacar la " + masa + " de la caja y extenderla.");
+    } if (ingredienteMasa <1) {
+      console.log("No tienes " + masa + ". Vete a comprarla.");
+    }
+  
+    if (ingredienteTomate >= 1) {
+      console.log("Abrir el bote de " + tomate + " y echarlo sobre la masa.");
+    } if (ingredienteTomate <1) {
+      console.log("No tienes " + tomate + ". Vete a comprarlo.");
+    }
+  
+    if (ingredienteMozzarella >= 1) {
+      console.log("Abrir el paquete de " + mozzarella + " y espolvorearla por la pizza.");
+    } if (ingredienteMozzarella <1) {
+      console.log("No tienes " + mozzarella + ". Compra más.");
+    }
+
+      if (ingredienteCabrales >= 1) {
+        console.log("Desmigar el " + cabrales);
+      } if(ingredienteCabrales<1) {
+        console.log("Sin " + cabrales + ". El sabor será más suave.");
+      }
+
+      if (ingredienteArzua >= 1) {
+        console.log("Desmigar el " + Arzua);
+      } if(ingredienteArzua<1) {
+        console.log("Sin " + Arzua + ". El sabor será más suave.");
+      }
+
+
+    }
+  
 
 
 
-function precalentar() {
+
+export function precalentar() {
 
     if (ingredienteMasa >=1) {
         console.log("Precalentamos el horno 20 minutos a 200 grados e introducimos la bandeja con la pizza.");
@@ -101,12 +137,12 @@ function precalentar() {
 }
 
 
-function cocinarPizza(segundos) {
+export function cocinarPizza(segundos) {
     let contador = segundos;
     const intervalo = setInterval(function() {
       if (contador === 0) {
         clearInterval(intervalo);
-        console.log("ñeeeeee ñeeeeee ñeeeeeee...")
+        console.log("ñeeeeee ñeeeeee ñeeeeeee...");
         console.log("¡Pizza preparada! ¡Borja está salivando!");
       } else {
         console.log(contador);
@@ -116,7 +152,7 @@ function cocinarPizza(segundos) {
   }
 
 
- function repartir () {
+ export function repartir() {
     if (ingredienteMasa >=1) {
         console.log("Cuando la pizza esté lista, sacarla del horno, meterla en su caja y enviarsela a Borja.");
     } if (ingredienteMasa <1) {
