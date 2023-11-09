@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>JS Pizza</title>
+</head>
+<body>
+    <main>
+        <img id="header" src="/assets/pizza-logo.png" alt="pizza logo">
+        <h1 id="header">VERO'S PIZZERY</h1>
+        <form id="pizzaForm">
+            <label for="pizzaSelect">Elige una pizza:</label>
+            <select id="pizzaSelect">
+              <option value="" disabled selected>Selecciona una pizza</option>
+            </select>
+            <button type="button" onclick="mostrarIngredientes()">Mostrar Ingredientes</button>
+            <button type="button" onclick="prepararPizza()">Preparar Pizza</button>
+          </form>
+    
+        
+          <div id="resultado"></div>
+
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
